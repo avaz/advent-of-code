@@ -46,12 +46,12 @@ public class CampCleanup {
 
     }
 
-    final Path input = Path.of("src/main/resources/day4/input.txt");
-    try(final Stream<String> lines = Files.lines(input)) {
+    final Path input = Path.of("src/main/resources/day4/input_elena.txt");
+    try (final Stream<String> lines = Files.lines(input)) {
       final long count = lines.map(SectionPair::new).filter(SectionPair::fullOverlap).count();
       System.out.println(count);
     }
-    try(final Stream<String> lines = Files.lines(input)) {
+    try (final Stream<String> lines = Files.lines(input)) {
       final long count = lines.map(SectionPair::new).filter(SectionPair::partialOverlap).count();
       System.out.println(count);
     }
